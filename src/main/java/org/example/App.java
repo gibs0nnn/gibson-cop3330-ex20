@@ -20,7 +20,7 @@ public class App
         String state = scanner.next();
         double tax = 0;
 
-        //Sort based on state/county input
+        //Sort based on state/county input and evaluate tax
         if(state.contentEquals("Wisconsin")) {
             tax = order * 0.05;
             System.out.println("What county do you live in?");
@@ -39,47 +39,5 @@ public class App
         //Output
         System.out.println("The tax is $" + Math.round(tax * 100.0) / 100.0);
         System.out.println("The total is $" + Math.round(order * 100.0) / 100.0);
-
-
-
-
-
-        /*
-        //User input for order amount and state residing
-        double tax = 0;
-        System.out.print("What is the order amount? ");
-        double total = scanner.nextDouble();
-        System.out.print("What state do you live in? ");
-        String state = scanner.next();
-
-        //Conditional for Wisconsin/Illinois and Calculations
-        if(state.toLowerCase(Locale.ROOT).contentEquals("wisconsin")) {
-            tax = total * 0.05;
-            System.out.println("DEBUG tax in WI is " + tax);
-            total += tax;
-            System.out.println("total currently is: " + total);
-
-            System.out.print("What county do you live in? ");
-            String county = scanner.next();
-
-            if(county.toLowerCase(Locale.ROOT).contentEquals("eau claire") ||
-                    county.toLowerCase(Locale.ROOT).contentEquals("dunn")) {
-                tax = tax + (total * 0.005);
-                System.out.println("tax in county is " + tax);
-                total += tax;
-
-            }
-        } else if(state.toLowerCase(Locale.ROOT).contentEquals("illinois")) {
-            tax = total * 0.08;
-            System.out.println("tax in illinois is " + tax);
-            total += tax;
-            System.out.println("total in illinois is " + total);
-
-        }
-
-        //Output
-        System.out.println("The tax is $" + Math.round(tax * 100) / 100 +
-                    "\nThe total is $" + Math.round(total * 100) / 100);
-        */
     }
 }
